@@ -470,16 +470,16 @@ if (!function_exists('create_specialisms_taxonomies')) {
         register_taxonomy("specialisms", array("jobs", "employer", "candidate"), array
             (
             "hierarchical" => true,
-            "label" => __("Specialisms", 'jobhunt'),
-            'labels' => array('new_item_name' => __('New Item Specialism', 'jobhunt'),
-                'add_new_item' => __('Add New Specialism', 'jobhunt'),
+            "label" => __("Programming language", 'jobhunt'),
+            'labels' => array('new_item_name' => __('New Item Programming language', 'jobhunt'),
+                'add_new_item' => __('Add Programming language', 'jobhunt'),
                 'edit_item' => __('Edit Specialism', 'jobhunt'),
-                "singular_name" => __("Specialism", 'jobhunt')
+                "singular_name" => __("Programming language", 'jobhunt')
             ),
             "public" => false,
             'show_ui' => true,
             "show_in_menu" => true,
-            "rewrite" => false)
+            'rewrite'           => array( 'slug' => 'programming_language' ),)
         );
     }
 

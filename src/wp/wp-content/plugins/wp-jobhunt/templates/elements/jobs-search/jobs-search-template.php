@@ -142,7 +142,7 @@ if (!function_exists('cs_job_search_box')) {
                                                 echo ' style="color:' . $job_search_layout_heading_color . ' !important;"';
                                             }
                                             ?>>
-											<?php _e('Search keywords e.g. web design', 'jobhunt') ?>
+											<?php _e('Search keywords e.g. JAVA', 'jobhunt') ?>
                                             </label> 
                                             <?php
                                             }
@@ -159,12 +159,12 @@ if (!function_exists('cs_job_search_box')) {
                                     <div class="col-lg-3 col-md-3 col-sm-6">
                                     <?php } ?>
                                     <?php if ($job_lable_switch == 'yes') { ?>
-                                        <span class="search_title"><?php _e('Specialism ', 'jobhunt') ?></span>
+                                        <span class="search_title"><?php _e('Programming language', 'jobhunt') ?></span>
                                     <?php } ?>
                                     <div class="select-dropdown">
                                         <?php
                                         $specialisms_options = '';
-                                        $specialisms_options[''] = __('All specialisms', 'jobhunt');
+                                        $specialisms_options[''] = __('All programming languages', 'jobhunt');
                                         $specialisms_args = array(
                                             'orderby' => 'name',
                                             'order' => 'ASC',
@@ -187,10 +187,10 @@ if (!function_exists('cs_job_search_box')) {
                                             'std' => '',
                                             'id' => '',
                                             'cust_id' => 'specialisms',
-                                            'cust_name' => 'specialisms',
+                                            'cust_name' => 'programming_languages',
                                             'options' => $specialisms_options,
                                             'classes' => 'chosen-select',
-                                            'extra_atr' => 'data-placeholder="' . __("All specialisms", "jobhunt") . '"',
+                                            'extra_atr' => 'data-placeholder="' . __('All programming languages', 'jobhunt') . '"',
                                         );
                                         $cs_form_fields2->cs_form_select_render($cs_opt_array);
                                         ?>
@@ -199,7 +199,7 @@ if (!function_exists('cs_job_search_box')) {
                                             if ($job_search_layout_heading_color != '') {
                                                 echo ' style="color:' . $job_search_layout_heading_color . ' !important;"';
                                             }
-                                            ?>><?php _e("Filter by specialisms e.g. developer, designer", 'jobhunt') ?></label>
+                                            ?>><?php _e("Filter by programming language e.g. C++", 'jobhunt') ?></label>
                                             <?php } ?>
                                     </div>
                                 </div>

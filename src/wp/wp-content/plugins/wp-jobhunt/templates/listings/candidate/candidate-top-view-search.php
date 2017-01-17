@@ -204,8 +204,8 @@ global $cs_plugin_options;
         <div class="col-lg-4 col-md-4">
             <div class="search-category">
                 <div class="select-holder">
-                    <select name="specialisms" id="specialisms" data-placeholder="<?php echo __('All specialisms','jobhunt'); ?>" class="chosen-select">
-                        <option value=""><?php _e('All specialisms', 'jobhunt') ?></option>
+                    <select name="programming_languages" id="specialisms" data-placeholder="<?php echo __('All programming languages','jobhunt'); ?>" class="chosen-select">
+                        <option value=""><?php _e('All programming languages', 'jobhunt') ?></option>
                         <?php
                         $specialisms_args = array(
                             'orderby' => 'name',

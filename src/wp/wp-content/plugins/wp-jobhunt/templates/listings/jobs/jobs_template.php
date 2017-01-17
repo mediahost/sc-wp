@@ -123,9 +123,9 @@ if ( ! function_exists( 'cs_jobs_listing' ) ) {
 		if ( isset( $_GET['specialisms_string'] ) && $_GET['specialisms_string'] != '' ) {
 			$specialisms = explode( ",", $_GET['specialisms_string'] );
 			$qrystr .= '&specialisms=' . $_GET['specialisms_string'];
-		} elseif ( isset( $_GET['specialisms'] ) && $_GET['specialisms'] != '' ) {
-			$specialisms = $_GET['specialisms'];
-			$qrystr .= '&specialisms=' . $_GET['specialisms'];
+		} elseif ( isset( $_GET['programming_languages'] ) && $_GET['programming_languages'] != '' ) {
+			$specialisms = $_GET['programming_languages'];
+			$qrystr .= '&programming_languages=' . $_GET['programming_languages'];
 			if ( ! is_array( $specialisms ) )
 				$specialisms = Array( $specialisms );
 		}

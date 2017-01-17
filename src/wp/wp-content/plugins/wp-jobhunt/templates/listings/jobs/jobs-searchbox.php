@@ -350,12 +350,12 @@ global $wpdb, $cs_plugin_options, $cs_form_fields2;
             </form>
         </div>
         <div class="cs-job-specialisms">
-            <div class="searchbox-heading"> <h5><?php echo __('specialisms', 'jobhunt') ?></h5> </div>
+            <div class="searchbox-heading"> <h5><?php echo __('programming language', 'jobhunt') ?></h5> </div>
             <form method="GET" id="frm_specialisms_list" >
                 <?php
                 // parse query string and create hidden fileds
                 $final_query_str = str_replace("?", "", $qrystr);
-                $final_query_str = cs_remove_qrystr_extra_var($final_query_str, 'specialisms', 'no');
+                $final_query_str = cs_remove_qrystr_extra_var($final_query_str, 'programming_languages', 'no');
                 $query = explode('&', $final_query_str);
                 foreach ($query as $param) {
                     if (!empty($param)) {
@@ -396,7 +396,7 @@ global $wpdb, $cs_plugin_options, $cs_form_fields2;
                         $selected_spec = get_term_by('slug', $specialisms[0], 'specialisms');
                         if (isset($selected_spec->term_id))
                             $specialisms_parent_id = $selected_spec->term_id;
-                        echo '<li><a href ="' . cs_remove_qrystr_extra_var($qrystr, 'specialisms') . '" onclick="cs_listing_content_load();">' . __('View all specialisms', 'jobhunt') . '</a></li><li>&nbsp;</li>';
+                        echo '<li><a href ="' . cs_remove_qrystr_extra_var($qrystr, 'programming_languages') . '" onclick="cs_listing_content_load();">' . __('View all programming languages', 'jobhunt') . '</a></li><li>&nbsp;</li>';
                     }
                     $specialisms_args = array(
                         'orderby' => 'name',
@@ -548,7 +548,7 @@ global $wpdb, $cs_plugin_options, $cs_form_fields2;
                                                     array(
                                                         'simple' => true,
                                                         'cust_id' => 'checklist' . $number_option,
-                                                        'cust_name' => '',
+                                                        'cust_name' => 'programming_language',
                                                         'extra_atr' => ' onclick="cs_listing_content_load();" onchange="javascript:submit_specialism_form(\'frm_specialisms_list\', \'specialisms_string\');" checked="checked"',
                                                         'classes' => $input_type_specialism,
                                                         'std' => $specialismsitem->slug,
@@ -598,7 +598,7 @@ global $wpdb, $cs_plugin_options, $cs_form_fields2;
                                             $cs_form_fields2->cs_form_radio_render(
                                                     array(
                                                         'cust_id' => 'checklist' . $number_option,
-                                                        'cust_name' => ' name="specialisms"',
+                                                        'cust_name' => ' name="programming_language"',
                                                         'extra_atr' => ' onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" checked="checked"',
                                                         'classes' => $input_type_specialism,
                                                         'std' => $specialismsitem->slug,
@@ -613,7 +613,7 @@ global $wpdb, $cs_plugin_options, $cs_form_fields2;
                                             $cs_form_fields2->cs_form_radio_render(
                                                     array(
                                                         'cust_id' => 'checklist' . $number_option,
-                                                        'cust_name' => 'specialisms',
+                                                        'cust_name' => 'programming_languages',
                                                         'extra_atr' => ' onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();"',
                                                         'classes' => $input_type_specialism,
                                                         'std' => $specialismsitem->slug,
@@ -630,7 +630,7 @@ global $wpdb, $cs_plugin_options, $cs_form_fields2;
                                         $cs_form_fields2->cs_form_radio_render(
                                                 array(
                                                     'cust_id' => 'checklist' . $number_option,
-                                                    'cust_name' => 'specialisms',
+                                                    'cust_name' => 'programming_languages',
                                                     'extra_atr' => ' onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();"',
                                                     'classes' => $input_type_specialism,
                                                     'std' => $specialismsitem->slug,

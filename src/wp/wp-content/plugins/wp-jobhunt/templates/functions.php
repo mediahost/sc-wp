@@ -1392,7 +1392,7 @@ if ( ! function_exists( 'cs_time_elapsed_string' ) ) {
 
 	function cs_time_elapsed_string( $ptime ) {
 
-		return human_time_diff( $ptime, current_time( 'timestamp' ) ) . __( 'ago', 'jobhunt' );
+		return human_time_diff( $ptime, current_time( 'timestamp' ) ) . __( ' ago', 'jobhunt' );
 	}
 
 }

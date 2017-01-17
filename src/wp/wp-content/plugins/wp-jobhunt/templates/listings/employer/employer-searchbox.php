@@ -170,12 +170,12 @@ $popup_randid = rand(0, 499999999);
             </form>
         </div>
         <div class="cs-employer-specialisms">
-            <div class="searchbox-heading"> <h5><?php echo __('specialisms', 'jobhunt') ?></h5> </div>
+            <div class="searchbox-heading"> <h5><?php echo __('programming language', 'jobhunt') ?></h5> </div>
             <?php $list_rand = rand(0, 499999999); ?>   
             <form action="#" method="GET" id="frm_specialisms_list<?php echo esc_html($list_rand); ?>" >
                 <?php
                 $final_query_str = str_replace("?", "", $qrystr);
-                $final_query_str = cs_remove_qrystr_extra_var($final_query_str, 'specialisms', 'no');
+                $final_query_str = cs_remove_qrystr_extra_var($final_query_str, 'programming_languages', 'no');
                 $query = explode('&', $final_query_str);
                 foreach ($query as $param) {
                     if (!empty($param)) {
@@ -220,7 +220,7 @@ $popup_randid = rand(0, 499999999);
                     if ($specialisms != '') {
                         $selected_spec = get_term_by('slug', $specialisms[0], 'specialisms');
                         $specialisms_parent_id = isset($selected_spec->term_id) ? $selected_spec->term_id : '';
-                        echo '<li><a href ="' . cs_remove_qrystr_extra_var($qrystr, 'specialisms') . '" >' . __('View all specialisms', 'jobhunt') . '</a></li><li>&nbsp;</li>';
+                        echo '<li><a href ="' . cs_remove_qrystr_extra_var($qrystr, 'programming_languages') . '" >' . __('View all programming languages', 'jobhunt') . '</a></li><li>&nbsp;</li>';
                     }
                     $specialisms_args = array(
                         'orderby' => 'name',

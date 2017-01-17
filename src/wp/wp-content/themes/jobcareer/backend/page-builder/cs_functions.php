@@ -274,8 +274,8 @@ if (!function_exists('jobcareer_element_list')) {
             'candidate' => esc_html__('Candidate', 'jobcareer'),
             'employer' => esc_html__('Employer', 'jobcareer'),
             'jobs' => esc_html__('Jobs', 'jobcareer'),
-            'job_specialisms' => esc_html__('Job Specialisms', 'jobcareer'),
-            'job specialisms' => esc_html__('Job Specialisms', 'jobcareer'),
+            'programming_languages' => esc_html__('Programming languages', 'jobcareer'),
+            'programming_languages' => esc_html__('Programming languages', 'jobcareer'),
         );
         return $element_list;
     }

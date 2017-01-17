@@ -243,8 +243,8 @@ $height = '203';
                             if (isset($_GET['page_id'])) {
                                 $qrystr .= "&page_id=" . $_GET['page_id'];
                             }
-                            if (isset($_GET['specialisms'])) {
-                                $qrystr .= "&specialisms=" . $_GET['specialisms'];
+                            if (isset($_GET['programming_languages'])) {
+                                $qrystr .= "&programming_languages=" . $_GET['programming_languages'];
                             }
                             if ($wp_query->found_posts > get_option('posts_per_page')) {
                                 if (function_exists('jobcareer_pagination')) {

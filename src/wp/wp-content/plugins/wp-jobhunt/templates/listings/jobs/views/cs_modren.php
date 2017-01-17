@@ -137,7 +137,7 @@ if ($a['cs_job_searchbox'] == 'yes') {
                             <div class="cs-post-title"><h3><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo the_title(); ?></a></h3></div>
                             <ul>
                                 <?php if ($cs_job_posted <> '') { ?><li><span> <?php _e('Posted', 'jobhunt'); ?></span> <?php echo cs_time_elapsed_string($cs_job_posted); ?></li><?php } ?>
-                                <?php if ($specialisms_values <> '') { ?> <li><span><?php _e('Specialism', 'jobhunt'); ?></span><?php echo esc_html($specialisms_values); ?></li><?php } ?>
+                                <?php if ($specialisms_values <> '') { ?> <li><span><?php _e('Programming language', 'jobhunt'); ?></span><?php echo esc_html($specialisms_values); ?></li><?php } ?>
                                 <?php if ($cs_jobs_address <> '') { ?> <li><span><?php _e('Location', 'jobhunt'); ?></span><?php echo esc_html($cs_jobs_address); ?></li><?php } ?>
 
                             </ul>

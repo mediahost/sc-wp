@@ -134,15 +134,15 @@ if (!function_exists('jobcareer_sitemap_shortcode')) {
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="site-maps-links">
-                        <h4><?php esc_html_e('Specialisms', 'jobcareer'); ?></h4>
+                        <h4><?php esc_html_e('Programming languages', 'jobcareer'); ?></h4>
                         <ul>
                             <?php
-                            $cs_terms = get_terms('specialisms');
+                            $cs_terms = get_terms('programming_languages');
                             if (isset($cs_terms) && is_array($cs_terms)) {
                                 foreach ($cs_terms as $cs_term) {
                                     $cs_spec_link = '';
                                     if ($cs_search_result_page != '') {
-                                        $cs_spec_link = ' href="' . esc_url_raw(get_page_link($cs_search_result_page) . '?&amp;specialisms=' . $cs_term->slug) . '"';
+                                        $cs_spec_link = ' href="' . esc_url_raw(get_page_link($cs_search_result_page) . '?&amp;programming_languages=' . $cs_term->slug) . '"';
                                     }
 
                                     echo '<li><a' . $cs_spec_link . '>' . $cs_term->name . '</a></li>';
