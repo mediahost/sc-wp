@@ -1,0 +1,8 @@
+{
+    "require": {
+        "nette/utils": "^2.4",
+        "nette/http": "^2.4",
+        "nette/security": "^2.4",
+        "majkl578/nette-identity-doctrine": "v2.3-rc1"
+    }
+}
