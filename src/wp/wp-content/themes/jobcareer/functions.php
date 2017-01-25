@@ -917,7 +917,7 @@ if ( ! function_exists( 'jobcareer_front_scripts' ) ) {
 
                 function jobcareer_google_map_script() {
                     global $jobcareer_options;
-                    $google_api_key = '?libraries=places';
+                    $google_api_key = '?key=AIzaSyBXp7hO8Tomw9A8YOpJHHWloOOSVnkm0ck&libraries=places';
                     if ( isset( $jobcareer_options['cs_googleapi_key'] ) && $jobcareer_options['cs_googleapi_key'] != '' ) {
                         $google_api_key = '?key=' . $jobcareer_options['cs_googleapi_key'] . '&libraries=places';
                     }

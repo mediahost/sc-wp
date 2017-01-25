@@ -2518,23 +2518,24 @@ if (!function_exists('cs_user_avatar')) {
             if (empty($status['error'])) {
 
                 $image = wp_get_image_editor($status['file']);
-
+				
                 if (!is_wp_error($image)) {
                     $sizes_array = array(
-                        array('width' => 270, 'height' => 203, 'crop' => true),
+                        array('width' => 999, 'height' => 999, 'crop' => false),
                         array('width' => 236, 'height' => 168, 'crop' => true),
                         array('width' => 200, 'height' => 200, 'crop' => true),
                         array('width' => 180, 'height' => 135, 'crop' => true),
                         array('width' => 150, 'height' => 113, 'crop' => true),
                     );
-                    $resize = $image->multi_resize($sizes_array, true);
+                    $resize = $image->multi_resize($sizes_array,true);
                 }
 
                 if (is_wp_error($image)) {
                     echo '<span class="error-msg">' . $image->get_error_message() . '</span>';
                 } else {
                     $wp_upload_dir = wp_upload_dir();
-                    $img_resized_name = isset($resize[0]['file']) ? basename($resize[0]['file']) : '';
+					foreach ($resize as $ke=> $res){
+                    $img_resized_name = isset($resize[$ke]['file']) ? basename($resize[$ke]['file']) : '';
                     $filename = $img_resized_name;
                     $filetype = wp_check_filetype(basename($filename), null);
                     if ($filename != '') {
@@ -2557,7 +2558,9 @@ if (!function_exists('cs_user_avatar')) {
                         $attach_data = wp_generate_attachment_metadata($attach_id, $filename);
                         wp_update_attachment_metadata($attach_id, $attach_data);
                     }
+					break;
                 }
+				}
                 //$uploads = wp_upload_dir();
                 //$img_resized_name = isset($resize[0]['file']) ? basename($resize[0]['file']) : '';
             } else {

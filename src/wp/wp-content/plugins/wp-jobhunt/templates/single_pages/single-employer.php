@@ -351,6 +351,7 @@ get_header();
                                     </div>
                                 </div>
                                 <aside class="section-sidebar col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<?php /*
                                     <div class="employer-contact-form">
                                         <h4><?php echo __("Contact", "jobhunt") . ' ' . $cs_user_data->display_name; ?></h4>
                                         <div class="cs-profile-contact-detail" data-adminurl="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" data-cap="recaptcha7">
@@ -455,6 +456,13 @@ get_header();
                                         </div>
 
                                     </div>
+									*/
+									$banners = get_field('banners','user_'.$cs_user_data->ID);
+									?>
+									<div class="employer-contact-form banners-employer">
+									<?php echo $banners; ?>
+									
+									</div>
                                     <div class="widget widget-map">
                                         <?php
                                         $cs_jobcareer_theme_options = get_option('cs_theme_options');

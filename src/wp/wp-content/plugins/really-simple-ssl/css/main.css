@@ -1,0 +1,118 @@
+.rsssl-main {
+  width:80%;
+  float:left;
+}
+
+.rsssl-sidebar {
+  width:20%;
+  float:left;
+}
+
+.rsssl-sidebar h4 {
+  font-size:14px
+  font-style:italic;
+}
+
+.rsssl-wrapper {
+  padding:30px;
+}
+
+@media screen and (max-width: 800px) {
+  .rsssl-sidebar, .rsssl-main {
+    width:100%;
+  }
+}
+
+.rsssl-sidebar img {
+  max-width:100%;
+  height:inherit;
+}
+
+.activate-ssl ul, .rsssl-result ul, .rsssl_bullets {
+  list-style-type: square;
+  margin-left:30px;
+}
+
+.activate-ssl .button {
+  margin-bottom:20px;
+}
+.really-simple-ssl-table td {
+  vertical-align: top;
+}
+.debug-log {
+  background-color: #fff;
+  padding:15px;
+  border:1px solid black;
+}
+
+.icons {
+  width:15px;
+  height:15px;
+}
+
+.loader {
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 50px 150px;;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ce4233;
+  letter-spacing: 0.2em;
+}
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #ce4233;
+  position: absolute;
+  -webkit-animation: load .7s infinite alternate ease-in-out;
+          animation: load .7s infinite alternate ease-in-out;
+}
+.loader::before {
+  top: 0;
+}
+.loader::after {
+  bottom: 0;
+}
+
+@-webkit-keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}
+
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}

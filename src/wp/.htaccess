@@ -1,4 +1,12 @@
 
+
+# BEGIN rlrssslReallySimpleSSL rsssl_version[2.4.3]
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+# END rlrssslReallySimpleSSL
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On

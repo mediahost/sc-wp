@@ -447,6 +447,7 @@ if ( ! class_exists( 'wp_jobhunt' ) ) {
             // temporary off
             wp_enqueue_script( 'cs_bootstrap_min_js', plugins_url( '/assets/scripts/bootstrap.min.js', __FILE__ ), array( 'jquery' ), '', true );
 			$google_api_key = '?libraries=places';
+			$google_api_key = '?key=AIzaSyBXp7hO8Tomw9A8YOpJHHWloOOSVnkm0ck&libraries=places';
 			if ( isset( $cs_plugin_options['cs_google_api_key'] ) && $cs_plugin_options['cs_google_api_key'] != '' ) {
 				$google_api_key = '?key=' . $cs_plugin_options['cs_google_api_key'] . '&libraries=places';
 			}
@@ -651,6 +652,7 @@ if ( ! class_exists( 'wp_jobhunt' ) ) {
         public function cs_google_place_scripts() {
 			global $cs_plugin_options;
             $google_api_key = '?libraries=places';
+			$google_api_key = '?key=AIzaSyBXp7hO8Tomw9A8YOpJHHWloOOSVnkm0ck&libraries=places';
 			if ( isset( $cs_plugin_options['cs_google_api_key'] ) && $cs_plugin_options['cs_google_api_key'] != '' ) {
 				$google_api_key = '?key=' . $cs_plugin_options['cs_google_api_key'] . '&libraries=places';
 			}
